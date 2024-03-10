@@ -1,7 +1,12 @@
 # vue3 element-plus typescript
 
+### 开发阶段，切勿使用
+
+### Do not use during development stage
+
+
+> 基本用法：
 - 确保项目是 vue3 框架并安装和注册了 element-plus
-  > 基本用法：
 - 在 main.js 中引入组件及样式
 
 ```javascript
