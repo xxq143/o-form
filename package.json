@@ -1,0 +1,48 @@
+{
+  "name": "o-form",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "form",
+    "element-plus",
+    "less",
+    "o-form"
+  ],
+  "main": "./dist/o-form.umd.cjs",
+  "module": "./dist/o-form.js",
+  "exports": {
+    ".": {
+      "import": "./dist/o-form.js",
+      "require": "./dist/o-form.umd.cjs"
+    },
+    "./dist/index.css": "./dist/index.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build:view": "vue-tsc && vite build --config vite.config.js",
+    "build:lib": "vue-tsc && vite build --config vite.config.lib.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.9.0",
+    "element-plus": "^2.6.0",
+    "lodash": "^4.17.21",
+    "uid": "^2.0.2",
+    "vue": "^3.4.19",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.25",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "less": "^4.2.0",
+    "less-loader": "^12.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vue-tsc": "^1.8.27"
+  }
+}
