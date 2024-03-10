@@ -28,5 +28,6 @@ export class TimePicker extends FormItem implements TimePickerOptions {
   init(options?: TimePickerOptions): void {
     if (options) {
     }
+    this.setItemConfig(this)
   }
 }

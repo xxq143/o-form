@@ -22,5 +22,6 @@ export class TimeSelect extends FormItem implements TimeSelectOptions {
   init(options?: TimeSelectOptions): void {
     if (options) {
     }
+    this.setItemConfig(this)
   }
 }

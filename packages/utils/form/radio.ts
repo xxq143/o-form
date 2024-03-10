@@ -20,5 +20,6 @@ export class Radio extends FormItem implements RadioOptions {
   init(options?: RadioOptions): void {
     if (options) {
     }
+    this.setItemConfig(this)
   }
 }

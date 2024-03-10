@@ -45,6 +45,7 @@ export class Cascader extends FormItem implements CascaderOptions {
       this.setteleported()
       this.settagType()
     }
+    this.setItemConfig(this)
   }
   setOptions(options?: Array<Options>) {
     if (options) {

@@ -20,5 +20,6 @@ export class Switch extends FormItem implements SwitchOptions {
   init(options?: SwitchOptions): void {
     if (options) {
     }
+    this.setItemConfig(this)
   }
 }

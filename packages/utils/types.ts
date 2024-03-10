@@ -25,7 +25,9 @@ export type InsOptions = CascaderOptions | CheckboxOptions | ColorOptions | Date
 
 export interface BaseOptions {
     key: string
+    prop: string
     label: string
+    itemDefaultValue: any
     _itemForm?: FormResult
     _uid?: string
     _outPutProps?: Array<string>
@@ -67,8 +69,6 @@ export interface Rules {
 }
 export interface FormItemOptions extends BaseOptions {
     oType: string
-    prop: string
-    itemDefaultValue?: any
     span?: number
     size?: string
     placeholder?: string

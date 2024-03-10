@@ -29,6 +29,7 @@ export class Checkbox extends FormItem implements CheckboxOptions {
     } else {
       this.setOptions()
     }
+    this.setItemConfig(this)
   }
   setOptions(options?: Array<Options>) {
     if (options) {

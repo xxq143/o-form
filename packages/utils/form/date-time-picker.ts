@@ -54,5 +54,6 @@ export class DateTimePicker extends FormItem implements DateTimePickerOptions {
     if (options) {
     } else {
     }
+    this.setItemConfig(this)
   }
 }

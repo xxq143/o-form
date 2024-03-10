@@ -22,5 +22,6 @@ export class Input extends FormItem implements InputOptions {
   init(options?: InputOptions): void {
     if (options) {
     }
+    this.setItemConfig(this)
   }
 }

@@ -19,5 +19,6 @@ export class Number extends FormItem implements NumberOptions {
   init(options?: NumberOptions): void {
     if (options) {
     }
+    this.setItemConfig(this)
   }
 }

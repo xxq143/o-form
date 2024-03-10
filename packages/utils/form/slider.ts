@@ -29,5 +29,6 @@ export class Slider extends FormItem implements SliderOptions {
   init(options?: SliderOptions): void {
     if (options) {
     }
+    this.setItemConfig(this)
   }
 }

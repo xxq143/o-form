@@ -2,8 +2,6 @@ import { Base } from './base'
 import { FormItemOptions, Rules, InsOptions } from '../types'
 export class FormItem extends Base implements FormItemOptions {
     oType: string = ''
-    itemDefaultValue: any = null
-    prop: string = ''
     span?: number = 6
     size?: string = 'default'
     placeholder?: string = '请输入'
@@ -16,23 +14,13 @@ export class FormItem extends Base implements FormItemOptions {
     }
     itemInit(options?: FormItemOptions) {
         if (options) {
-            this.setProp(options.prop)
             this.setSpan(options.span)
             this.setSize(options.size)
             this.setPlaceholder(options.placeholder)
             this.setDisabled(options.disabled)
             this.setClearable(options.clearable)
-        } else {
-            this.setProp(this.key)
         }
-        super.setItemConfig(this, ['prop', 'span', 'size', 'placeholder', 'disabled', 'clearable'])
-    }
-    setProp(prop: string) {
-        if (prop) {
-            this.prop = prop
-        } else {
-            this.prop = this.key
-        }
+        this.setItemConfig(this)
     }
     setSpan(span: number | undefined) {
         if (span) {

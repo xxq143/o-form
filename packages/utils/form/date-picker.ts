@@ -50,5 +50,6 @@ export class DatePicker extends FormItem implements DatePickerOptions {
     if (options) {
     } else {
     }
+    this.setItemConfig(this)
   }
 }

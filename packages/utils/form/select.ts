@@ -39,5 +39,6 @@ export class Select extends FormItem implements SelectOptions {
   init(options?: SelectOptions): void {
     if (options) {
     }
+    this.setItemConfig(this)
   }
 }

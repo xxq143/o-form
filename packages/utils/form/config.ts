@@ -1,9 +1,10 @@
 import { InsOptions } from '../types'
-export type PropKeys = 'oType' | 'key' | 'prop' | 'label' | 'span' | 'size' | 'placeholder' | 'disabled' | 'clearable' | 'labelWidth'
+export type PropKeys = 'oType' | 'key' | 'label' | 'span' | 'size' | 'placeholder' | 'disabled' | 'clearable' | 'labelWidth'
 export const oType: InsOptions = {
   oType: "select",
   key: "oType",
   label: "表单类型",
+  itemDefaultValue: '',
   disabled: true,
   span: 24,
   rules: {},
@@ -28,6 +29,7 @@ export const oType: InsOptions = {
 
 export const key: InsOptions = {
   oType: "input",
+  itemDefaultValue: '',
   key: "key",
   label: "键值 key",
   span: 24,
@@ -35,17 +37,19 @@ export const key: InsOptions = {
   prop: "key",
 };
 
-export const prop: InsOptions = {
-  oType: "input",
-  key: "prop",
-  label: "对象属性",
-  span: 24,
-  rules: {},
-  prop: "prop",
-};
+// export const prop: InsOptions = {
+//   oType: "input",
+//   itemDefaultValue: '',
+//   key: "prop",
+//   label: "对象属性",
+//   span: 24,
+//   rules: {},
+//   prop: "prop",
+// };
 
 export const label: InsOptions = {
   oType: "input",
+  itemDefaultValue: '',
   key: "label",
   label: "标签",
   span: 24,

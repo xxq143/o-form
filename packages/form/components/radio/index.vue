@@ -79,7 +79,7 @@ const modelValue = computed({
 function onChange(e) {
   props.onChange({
     [props.config.key]: e,
-    _uid: props.config.uid,
+    _uid: props.config._uid,
     _prop: props.config.prop,
   });
 }

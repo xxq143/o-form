@@ -33,5 +33,6 @@ export class Color extends FormItem implements ColorOptions {
     if (options) {
     } else {
     }
+    this.setItemConfig(this)
   }
 }

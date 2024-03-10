@@ -18,5 +18,6 @@ export class Rate extends FormItem implements RateOptions {
   init(options?: RateOptions): void {
     if (options) {
     }
+    this.setItemConfig(this)
   }
 }

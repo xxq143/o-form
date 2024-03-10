@@ -21,6 +21,7 @@
               :config="state.config"
               :isTest="state.isTest"
               :eventHandler="eventHandler"
+              :on-change="onChange"
             ></OForm>
             <div style="padding: 10px"></div>
           </el-scrollbar>
@@ -41,7 +42,8 @@
         </el-col>
         <el-col :span="12">
           <el-button @click="addItem">add</el-button>
-          <el-button @click="submit">submit see console</el-button>
+          <el-button @click="submit">控制台查看提交结果</el-button>
+          <el-button @click="printJson">控制台查看json配置</el-button>
         </el-col>
       </el-row>
     </footer>
@@ -119,7 +121,6 @@ function refresh() {
   state.data = cloneDeep(root.form.data);
   state.config = cloneDeep(root.form.config);
   state.isTest = root.isTest;
-  console.log(root);
 }
 
 function eventHandler(
@@ -133,7 +134,7 @@ function eventHandler(
     const currentIns = root.getFormItemIns(config._uid);
 
     if (currentIns) {
-      const dialogForm = currentIns.getItemConfig();
+      const dialogForm = currentIns.getItemConfig(currentIns);
       state.dialog.data = dialogForm.data;
       state.dialog.config = dialogForm.config;
       state.currentUid = currentIns._uid;
@@ -142,8 +143,12 @@ function eventHandler(
   }
 }
 
-function dialogUpdate(data: any) {
+function onChange(data: Record<string, any>): void {
   console.log(data);
+  root.updateItemDefaultValue(data._uid, data);
+}
+
+function dialogUpdate(data: Record<string, any>): void {
   root.updateItem(state.currentUid, data);
   refresh();
 }
@@ -161,6 +166,9 @@ function submit() {
   }
 }
 
+function printJson() {
+  console.log(root.getFormConfig().json);
+}
 function init() {
   state.typeOpts = root.types.map((item) => {
     return {

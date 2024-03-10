@@ -53,6 +53,7 @@ export class Form extends Base implements FormOptions {
   formInit(options?: FormOptions): void {
     if (options) {
     }
+    this.setItemConfig(this)
   }
   addToForm(ins: AllIns): void {
     this.form.list?.push(ins)
@@ -92,6 +93,12 @@ export class Form extends Base implements FormOptions {
       this.removeByUid(payload._uid)
     }
   }
+  updateItemDefaultValue(uid: string, data: Record<string, any>): void {
+    const currentIns = this.form.list?.find(item => item._uid === uid)
+    if (currentIns) {
+      currentIns.updateDefaultValue(data)
+    }
+  }
   updateItem(uid: string, data: Record<string, any>): void {
     const currentIns = this.form.list?.find(item => item._uid === uid)
     if (currentIns) {
@@ -116,14 +123,20 @@ export class Form extends Base implements FormOptions {
     return this.form.list?.find(item => item._uid === uid)
   }
   getFormConfig(): FormResult {
-    const data = cloneDeep(this.form.data)
-    const config = cloneDeep(this.form.config)
-    const result: FormResult = {
-      data,
-      config,
-      json: `const data = ${data}
-        const config = ${config}
-      `
+    let result: FormResult = {
+      data: this.form.data,
+      config: this.form.config,
+      json: `暂未添加表单配置`
+    }
+    if (this.form.config[0].children?.length && Object.keys(this.form.data).length) {
+      const data = cloneDeep(this.form.data)
+      const config = cloneDeep(this.form.config)
+      result = {
+        data,
+        config,
+        json: `const data = ${JSON.stringify(data)}
+const config = ${JSON.stringify(config)}`
+      }
     }
     return result
   }
