@@ -134,7 +134,7 @@ function eventHandler(
     const currentIns = root.getFormItemIns(config._uid);
 
     if (currentIns) {
-      const dialogForm = currentIns.getItemConfig(currentIns);
+      const dialogForm = currentIns.getItemConfig();
       state.dialog.data = dialogForm.data;
       state.dialog.config = dialogForm.config;
       state.currentUid = currentIns._uid;

@@ -1,5 +1,5 @@
 import { uid } from 'uid'
-import { BaseOptions, FormResult, InsOptions, PropKeys, AllIns } from '../types'
+import { BaseOptions, FormResult, InsOptions, PropKeys } from '../types'
 import * as defaultItemCfg from './config'
 
 export class Base {
@@ -49,8 +49,7 @@ export class Base {
     })
     this._itemForm.config[0].children = children
   }
-  getItemConfig(ins?: AllIns): FormResult {
-    // this.setItemConfig(ins)
+  getItemConfig(): FormResult {
     return this._itemForm
   }
   getUid(): string {
