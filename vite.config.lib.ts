@@ -15,7 +15,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve(__dirname, 'packages/form/index.js'),
+      entry: resolve(__dirname, 'packages/index.ts'),
       name: 'OForm',
       fileName: 'o-form'
     },
