@@ -4,8 +4,8 @@
 
 ### Do not use during development stage
 
-
 > 基本用法：
+
 - 确保项目是 vue3 框架并安装和注册了 element-plus
 - 在 main.js 中引入组件及样式
 
@@ -21,17 +21,28 @@ app.use(oForm);
 
 ```javascript
 <template>
-    <OForm
-        ref="formRef"
-        v-model:data="state.data"
-        :config="state.config"
-    ></OForm>
+    <o-form ref="formRef" v-model:data="state.form" :config="state.config"></o-form>
+    <el-button @click="submit">submit</el-button>
 </template>
 
 <script>
-    import {ref} from 'vue'
-    import { OForm, utils, types } from "pkg/index";
+    import {ref, reactive} from 'vue'
+
     const formRef = ref(HTMLElement)
+    const state = reactive({
+        data: {},
+        config: [{
+            label: '',
+            children:[{
+                oType: 'input',
+                key: 'test',
+                prop: 'test',
+                span: 6,
+                label: 'testLabel',
+                rules: {required: true, message: '请输入', trigger: 'blur'}
+            }]
+        }]
+    })
 
     function submit() {
         // 提交方法 Promise
