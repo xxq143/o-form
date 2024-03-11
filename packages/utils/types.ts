@@ -77,6 +77,7 @@ export interface FormItemOptions extends BaseOptions {
     disabled?: boolean
     clearable?: boolean
     rules?: Rules
+    dictCode?: string
 }
 
 export interface Options {

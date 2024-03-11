@@ -39,8 +39,8 @@ const props = defineProps({
   },
   dictionary: {
     type: Object,
-    default: () => {}
-  }
+    default: () => {},
+  },
 });
 
 // 透传 element plus 表单属性，todo 后期会对字段进行校验过滤
@@ -49,6 +49,13 @@ const attrs = computed(() => {
 });
 
 const options = computed(() => {
+  if (
+    props.config.dictCode &&
+    props.dictionary &&
+    props.dictionary[props.config.dictCode]
+  ) {
+    return props.dictionary[props.config.dictCode];
+  }
   return props.config.options || [];
 });
 

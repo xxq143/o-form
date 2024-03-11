@@ -3,19 +3,38 @@
     <div v-if="props.config.useIndeterminate">
       <el-row>
         <el-col>
-          <el-checkbox v-model="checkAll" :indeterminate="isIndeterminate" border
-            @change="handleCheckAllChange">全选</el-checkbox>
+          <el-checkbox
+            v-model="checkAll"
+            :indeterminate="isIndeterminate"
+            border
+            @change="handleCheckAllChange"
+            >全选</el-checkbox
+          >
         </el-col>
       </el-row>
-      <el-checkbox-group v-model="modelValue" v-bind="attrs" @change="handleCheckedChange">
-        <el-checkbox v-for="option in options" :key="option.value" :label="option.value" v-bind="option">{{ option.label
-        }}</el-checkbox>
+      <el-checkbox-group
+        v-model="modelValue"
+        v-bind="attrs"
+        @change="handleCheckedChange"
+      >
+        <el-checkbox
+          v-for="option in options"
+          :key="option.value"
+          :label="option.value"
+          v-bind="option"
+          >{{ option.label }}</el-checkbox
+        >
       </el-checkbox-group>
     </div>
     <div v-else>
       <el-checkbox-group v-model="modelValue" v-bind="attrs" @change="onChange">
-        <el-checkbox v-for="option of options" :key="option.value" :label="option.value" v-bind="option">{{ option.label
-        }}</el-checkbox>
+        <el-checkbox
+          v-for="option of options"
+          :key="option.value"
+          :label="option.value"
+          v-bind="option"
+          >{{ option.label }}</el-checkbox
+        >
       </el-checkbox-group>
     </div>
     <!-- todo 暂时不做单个勾选操作 -->
@@ -31,21 +50,21 @@ const props = defineProps({
   data: {
     type: Object,
     reuiqre: true,
-    default: () => { },
+    default: () => {},
   },
   config: {
     type: Object,
     reuiqre: true,
-    default: () => { },
+    default: () => {},
   },
   onChange: {
     type: Function,
-    default: () => { },
+    default: () => {},
   },
   dictionary: {
     type: Object,
-    default: () => {}
-  }
+    default: () => {},
+  },
 });
 
 const checkAll = ref(false); // 是否全选
@@ -56,6 +75,13 @@ const attrs = computed(() => {
 });
 
 const options = computed(() => {
+  if (
+    props.config.dictCode &&
+    props.dictionary &&
+    props.dictionary[props.config.dictCode]
+  ) {
+    return props.dictionary[props.config.dictCode];
+  }
   return props.config.options || [];
 });
 const modelValue = computed({

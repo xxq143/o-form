@@ -129,6 +129,16 @@ export const options: InsOptions = {
   prop: "options",
 };
 
+export const dictCode: InsOptions = {
+  oType: "input",
+  itemDefaultValue: '',
+  key: "dictCode",
+  label: "字典",
+  span: 24,
+  rules: {},
+  prop: "dictCode",
+};
+
 
 export const labelWidth: InsOptions = {
   oType: "number",

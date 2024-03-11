@@ -7,6 +7,7 @@ export class FormItem extends Base implements FormItemOptions {
     placeholder?: string = '请输入'
     disabled?: boolean = false
     clearable?: boolean = true
+    dictCode?: string = ''
     rules?: Rules = { required: true, trigger: 'blur', message: '请输入' }
     constructor(options?: FormItemOptions) {
         super(options)
