@@ -1,7 +1,5 @@
 <template>
   <el-scrollbar wrap-style="padding: 20px;">
-    <!-- :isTest="state.isTest"
-      :eventHandler="eventHandler" -->
       <div>{{ state.data }}</div>
     <OForm
       ref="formRef"
