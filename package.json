@@ -3,6 +3,13 @@
   "private": false,
   "version": "0.0.12",
   "description": "vue3 element-plus form",
+  "homepage": "https://github.com/xxq143/o-form/blob/main/README.md",
+  "author": "xiaoxianqi <xiaopinbing@gmail.com>",
+  "funding": "https://github.com/xxq143/o-form.git",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/xxq143/o-form.git"
+  },
   "keywords": [
     "form",
     "element-plus",
