@@ -3,6 +3,7 @@ import { Checkbox } from './form/checkbox'
 import { Color } from './form/color'
 import { DatePicker } from './form/date-picker'
 import { DateTimePicker } from './form/date-time-picker'
+import { Dynamic } from './form/dynamic'
 import { Input } from './form/input'
 import { Number } from './form/number'
 import { Radio } from './form/radio'
@@ -13,15 +14,15 @@ import { Switch } from './form/switch'
 import { TimePicker } from './form/time-picker'
 import { TimeSelect } from './form/time-select'
 export { type PropKeys } from './form/config'
-export type AllInstance = new () => (Cascader | Checkbox | Color | DatePicker | DateTimePicker | Input | Number | Radio | Rate | Select | Slider | Switch | TimePicker | TimeSelect)
-export type AllIns = Cascader | Checkbox | Color | DatePicker | DateTimePicker | Input | Number | Radio | Rate | Select | Slider | Switch | TimePicker | TimeSelect
+export type AllInstance = new () => (Cascader | Checkbox | Color | DatePicker | DateTimePicker | Dynamic | Input | Number | Radio | Rate | Select | Slider | Switch | TimePicker | TimeSelect)
+export type AllIns = Cascader | Checkbox | Color | DatePicker | DateTimePicker | Dynamic | Input | Number | Radio | Rate | Select | Slider | Switch | TimePicker | TimeSelect
 export interface InsMap {
     readonly [key: string]: AllInstance
 }
 
-export type FormTypes = 'cascader' | 'checkbox' | 'color' | 'date-picker' | 'date-time-picker' | 'input' | 'number' | 'radio' | 'rate' | 'select' | 'slider' | 'switch' | 'time-picker' | 'time-select'
+export type FormTypes = 'cascader' | 'checkbox' | 'color' | 'date-picker' | 'date-time-picker' | 'dynamic' | 'input' | 'number' | 'radio' | 'rate' | 'select' | 'slider' | 'switch' | 'time-picker' | 'time-select'
 
-export type InsOptions = CascaderOptions | CheckboxOptions | ColorOptions | DatePickerOptions | DateTimePickerOptions | InputOptions | NumberOptions | RadioOptions | RateOptions | SelectOptions | SliderOptions | SwitchOptions | TimePickerOptions | TimeSelectOptions
+export type InsOptions = CascaderOptions | CheckboxOptions | ColorOptions | DatePickerOptions | DateTimePickerOptions | DynamicOptions | InputOptions | NumberOptions | RadioOptions | RateOptions | SelectOptions | SliderOptions | SwitchOptions | TimePickerOptions | TimeSelectOptions
 
 export interface BaseOptions {
     key: string
@@ -166,6 +167,16 @@ export interface DateTimePickerOptions extends FormItemOptions {
     cellClassName?: Function
     teleported?: boolean
     arrowControl?: boolean
+}
+
+export interface DynamicOptions extends FormItemOptions {
+    oType: string
+    itemDefaultValue: any
+    type?: string
+    maxlength?: number
+    minlength?: number
+    showWordLimit?: boolean
+    readonly?: boolean
 }
 
 export interface InputOptions extends FormItemOptions {

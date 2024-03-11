@@ -47,17 +47,16 @@
         </el-col>
       </el-row>
     </footer>
-    <el-dialog v-model="state.dialog.visible" :title="state.currentUid">
+    <el-dialog
+      v-model="state.dialog.visible"
+      :fullscreen="true"
+      :title="state.currentUid"
+    >
       <OForm
         v-model:data="state.dialog.data"
         :config="state.dialog.config"
         :on-change="dialogUpdate"
       ></OForm>
-      <!-- <el-row>
-        <el-col :offset="8" :span="8">
-          <el-button style="width: 100%">submit</el-button>
-        </el-col>
-      </el-row> -->
     </el-dialog>
   </div>
 </template>
@@ -234,4 +233,3 @@ onMounted(() => {
   }
 }
 </style>
-: any: any

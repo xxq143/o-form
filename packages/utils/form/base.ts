@@ -4,7 +4,7 @@ import * as defaultItemCfg from './config'
 
 export class Base {
   _uid: string = ''
-  _outPutProps: Array<string> = ['oType', 'key', 'prop', 'label', 'span', 'size', 'disabled', 'clearable', 'rules', 'itemDefaultValue', '_uid']
+  _outPutProps: Array<string> = ['oType', 'key', 'prop', 'label', 'span', 'size', 'disabled', 'clearable', 'options', 'rules', 'itemDefaultValue', '_uid']
   _itemForm: FormResult = { data: {}, config: [{ label: '', key: '', children: [] }] }
   key: string = ''
   label: string = ''

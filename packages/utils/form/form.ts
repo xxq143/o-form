@@ -4,6 +4,7 @@ import { Checkbox } from './checkbox'
 import { Color } from './color'
 import { DatePicker } from './date-picker'
 import { DateTimePicker } from './date-time-picker'
+import { Dynamic } from './dynamic'
 import { Input } from './input'
 import { Number } from './number'
 import { Radio } from './radio'
@@ -23,6 +24,7 @@ export class Form extends Base implements FormOptions {
     color: Color,
     'date-picker': DatePicker,
     'date-time-picker': DateTimePicker,
+    dynamic: Dynamic,
     input: Input,
     number: Number,
     radio: Radio,
@@ -44,7 +46,7 @@ export class Form extends Base implements FormOptions {
     }],
     list: [],
   }
-  types: Array<FormTypes> = ['cascader', 'checkbox', 'color', 'date-picker', 'date-time-picker', 'input', 'number', 'radio', 'rate', 'select', 'slider', 'switch', 'time-picker', 'time-select']
+  types: Array<FormTypes> = ['cascader', 'checkbox', 'color', 'date-picker', 'date-time-picker', 'dynamic', 'input', 'number', 'radio', 'rate', 'select', 'slider', 'switch', 'time-picker', 'time-select']
   isTest: boolean = true
   public constructor(options?: FormOptions) {
     super(options)

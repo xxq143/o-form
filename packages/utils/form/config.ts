@@ -118,6 +118,18 @@ export const clearable: InsOptions = {
   itemDefaultValue: true,
 };
 
+
+export const options: InsOptions = {
+  oType: "dynamic",
+  itemDefaultValue: '',
+  key: "options",
+  label: "对象属性",
+  span: 24,
+  rules: {},
+  prop: "options",
+};
+
+
 export const labelWidth: InsOptions = {
   oType: "number",
   key: "labelWidth",

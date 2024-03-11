@@ -36,6 +36,12 @@
         v-model:data="modelValue"
         :on-change="props.onChange"
       />
+      <Dynamic
+        v-if="getType(props.config) === 'dynamic'"
+        :config="props.config"
+        v-model:data="modelValue"
+        :on-change="props.onChange"
+      ></Dynamic>
       <Input
         v-if="getType(props.config) === 'input'"
         :config="props.config"
@@ -90,6 +96,7 @@
         v-model:data="modelValue"
         :on-change="props.onChange"
       />
+
       <el-button-group v-if="props.isTest">
         <el-button
           link
@@ -122,6 +129,7 @@ import Checkbox from "../checkbox/index.vue";
 import Color from "../color/index.vue";
 import DatePicker from "../date-picker/index.vue";
 import DateTimePicker from "../date-time-picker/index.vue";
+import Dynamic from "../dynamic/index.vue";
 import Input from "../input/index.vue";
 import Number from "../number/index.vue";
 import Radio from "../radio/index.vue";
