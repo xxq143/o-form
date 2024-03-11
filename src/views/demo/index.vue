@@ -1,6 +1,8 @@
 <template>
   <el-scrollbar wrap-style="padding: 20px;">
-      <div>{{ state.data }}</div>
+    <el-card>
+      {{ state.data }}
+    </el-card>
     <OForm
       ref="formRef"
       v-model:data="state.data"
@@ -26,7 +28,7 @@ const state: State = reactive({
   config: [
     {
       label: "",
-      key: '',
+      key: "",
       children: [
         {
           oType: "dynamic",
