@@ -97,8 +97,8 @@ const props = defineProps({
     },
   },
   dictionary: {
-    type: Object,
-    default: () => {},
+    type: Array,
+    default: () => [],
   },
 });
 

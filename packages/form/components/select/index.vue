@@ -38,8 +38,8 @@ const props = defineProps({
     default: () => {},
   },
   dictionary: {
-    type: Object,
-    default: () => {},
+    type: Array,
+    default: () => [],
   },
 });
 

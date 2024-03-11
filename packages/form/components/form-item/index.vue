@@ -170,8 +170,8 @@ const props = defineProps({
     default: false,
   },
   dictionary: {
-    type: Object,
-    default: () => {}
+    type: Array,
+    default: () => []
   }
 });
 
