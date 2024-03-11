@@ -7,7 +7,7 @@
   "author": "xiaoxianqi <xiaopinbing@gmail.com>",
   "funding": "https://github.com/xxq143/o-form.git",
   "repository": {
-    "type": "github",
+    "type": "git",
     "url": "https://github.com/xxq143/o-form.git"
   },
   "keywords": [
