@@ -15,14 +15,14 @@
       <main>
         <div class="box">
           <el-scrollbar wrap-style="padding: 20px;">
-            <OForm
+            <o-form
               ref="formRef"
               v-model:data="state.data"
               :config="state.config"
               :isTest="state.isTest"
               :eventHandler="eventHandler"
               :on-change="onChange"
-            ></OForm>
+            ></o-form>
             <div style="padding: 10px"></div>
           </el-scrollbar>
         </div>
@@ -52,17 +52,17 @@
       :fullscreen="true"
       :title="state.currentUid"
     >
-      <OForm
+      <o-form
         v-model:data="state.dialog.data"
         :config="state.dialog.config"
         :on-change="dialogUpdate"
-      ></OForm>
+      ></o-form>
     </el-dialog>
   </div>
 </template>
 
 <script lang="ts" setup name="CreateForm">
-import { OForm, utils, types } from "pkg/index";
+import { OForm, utils, types } from "o-form";
 import { cloneDeep } from "lodash";
 
 import { onMounted, reactive, computed, ref } from "vue";

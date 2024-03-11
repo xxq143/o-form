@@ -3,17 +3,17 @@
     <el-card>
       {{ state.data }}
     </el-card>
-    <OForm
+    <o-form
       ref="formRef"
       v-model:data="state.data"
       :config="state.config"
       :on-change="onChange"
-    ></OForm>
+    ></o-form>
   </el-scrollbar>
 </template>
 
 <script lang="ts" setup name="Demo">
-import { OForm, utils, types } from "pkg/index";
+import { OForm, utils, types } from "o-form";
 
 import { onMounted, reactive, ref } from "vue";
 

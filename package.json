@@ -39,6 +39,7 @@
     "@vueuse/core": "^10.9.0",
     "element-plus": "^2.6.0",
     "lodash": "^4.17.21",
+    "o-form": "^0.0.15",
     "uid": "^2.0.2",
     "vue": "^3.4.19",
     "vue-router": "^4.3.0"
