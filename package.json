@@ -2,15 +2,16 @@
   "name": "o-form",
   "private": false,
   "version": "0.0.12",
-  "type": "module",
-  "files": [
-    "dist"
-  ],
+  "description": "vue3 element-plus form",
   "keywords": [
     "form",
     "element-plus",
     "less",
     "o-form"
+  ],
+  "type": "module",
+  "files": [
+    "dist"
   ],
   "main": "./dist/o-form.umd.cjs",
   "module": "./dist/o-form.js",
