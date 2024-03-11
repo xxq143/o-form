@@ -37,7 +37,7 @@ export class Form extends Base implements FormOptions {
   }
   labelWidth: string | number = ''
   labelPosition: 'left' | 'right' | 'top' = 'right'
-  dictionary: Record<string, Array<Options>> = {}
+  dictionary: Array<Options> = []
   form: FormResult = {
     data: {},
     config: [{

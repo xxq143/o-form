@@ -75,12 +75,11 @@ const attrs = computed(() => {
 });
 
 const options = computed(() => {
-  if (
-    props.config.dictCode &&
-    props.dictionary &&
-    props.dictionary[props.config.dictCode]
-  ) {
-    return props.dictionary[props.config.dictCode];
+  if (props.config.dictCode && props.dictionary) {
+    const result = props.dictionary.find(item => item.value === props.config.dictCode)
+    if(result && result.children && result.children.length) {
+      return result.children
+    }
   }
   return props.config.options || [];
 });
