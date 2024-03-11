@@ -9,12 +9,14 @@
       <Cascader
         v-if="getType(props.config) === 'cascader'"
         :config="props.config"
+        :dictionary="props.dictionary"
         v-model:data="modelValue"
         :on-change="props.onChange"
       />
       <Checkbox
         v-if="getType(props.config) === 'checkbox'"
         :config="props.config"
+        :dictionary="props.dictionary"
         v-model:data="modelValue"
         :on-change="props.onChange"
       />
@@ -57,6 +59,7 @@
       <Radio
         v-if="getType(props.config) === 'radio'"
         :config="props.config"
+        :dictionary="props.dictionary"
         v-model:data="modelValue"
         :on-change="props.onChange"
       />
@@ -69,6 +72,7 @@
       <Select
         v-if="getType(props.config) === 'select'"
         :config="props.config"
+        :dictionary="props.dictionary"
         v-model:data="modelValue"
         :on-change="props.onChange"
       />
@@ -165,6 +169,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  dictionary: {
+    type: Object,
+    default: () => {}
+  }
 });
 
 const modelValue = computed({

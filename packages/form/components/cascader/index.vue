@@ -30,6 +30,10 @@ const props = defineProps({
     type: Function,
     default: () => {},
   },
+  dictionary: {
+    type: Object,
+    default: () => {}
+  }
 });
 
 // 透传 element plus 表单属性，todo 后期会对字段进行校验过滤

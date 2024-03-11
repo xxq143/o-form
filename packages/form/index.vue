@@ -32,6 +32,7 @@
               v-else
               :config="child"
               :is-test="props.isTest"
+              :dictionary="props.dictionary"
               v-model:data="modelValue"
               :onChange="props.onChange"
               :event-handler="props.eventHandler"
@@ -94,6 +95,10 @@ const props = defineProps({
     default: () => {
       return {};
     },
+  },
+  dictionary: {
+    type: Object,
+    default: () => {},
   },
 });
 

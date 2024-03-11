@@ -54,6 +54,7 @@ export interface FormResult {
 export interface FormOptions extends BaseOptions {
     labelWidth?: string | number
     labelPosition: 'left' | 'right' | 'top'
+    dictionary?: Record<string, Array<Options>>,
     form: FormResult
     types: Array<FormTypes>
     isTest?: boolean

@@ -14,7 +14,7 @@ import { Slider } from './slider'
 import { Switch } from './switch'
 import { TimePicker } from './time-picker'
 import { TimeSelect } from './time-select'
-import { FormOptions, FormResult, AllIns, InsMap, FormTypes, AllInstance, InsOptions, Config } from '../types'
+import { FormOptions, FormResult, AllIns, InsMap, FormTypes, AllInstance, InsOptions, Config, Options } from '../types'
 import { cloneDeep } from 'lodash'
 
 export class Form extends Base implements FormOptions {
@@ -37,6 +37,7 @@ export class Form extends Base implements FormOptions {
   }
   labelWidth: string | number = ''
   labelPosition: 'left' | 'right' | 'top' = 'right'
+  dictionary: Record<string, Array<Options>> = {}
   form: FormResult = {
     data: {},
     config: [{

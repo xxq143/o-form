@@ -42,6 +42,10 @@ const props = defineProps({
     type: Function,
     default: () => { },
   },
+  dictionary: {
+    type: Object,
+    default: () => {}
+  }
 });
 
 const checkAll = ref(false); // 是否全选

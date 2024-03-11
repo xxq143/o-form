@@ -80,6 +80,7 @@ interface State {
   dialog: any;
 }
 const root = new utils.Form();
+console.log('root', root)
 const formRef = ref<InstanceType<typeof OForm>>();
 const state: State = reactive({
   data: {},
