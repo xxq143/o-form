@@ -11,7 +11,6 @@
         :key="item.value"
         :label="item.label"
         :value="item.value"
-        v-bind="item"
       />
     </el-select>
   </div>
