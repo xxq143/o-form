@@ -1,8 +1,10 @@
 # vue3 element-plus typescript
 
 ### 开发阶段，切勿使用
-
 ### Do not use during development stage
+
+
+> 说明：该组件目前仅提供简单的表单配置，旨在帮助个人项目的初始数据录入（或许有帮助），否则，请务在重要的项目中使用
 
 > 基本用法：
 
