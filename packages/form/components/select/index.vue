@@ -50,9 +50,16 @@ const attrs = computed(() => {
 
 const options = computed(() => {
   if (props.config.dictCode && props.dictionary) {
-    const result = props.dictionary.find(item => item.value === props.config.dictCode)
-    if(result && result.children && result.children.length) {
-      return result.children
+    const result = props.dictionary.find(
+      (item) => item.value === props.config.dictCode
+    );
+    if (result && result.children && result.children.length) {
+      return result.children.map((item) => {
+        return {
+          label: item.label,
+          value: item.value,
+        };
+      });
     }
   }
   return props.config.options || [];

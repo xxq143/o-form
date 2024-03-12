@@ -21,6 +21,7 @@
               :config="state.config"
               :isTest="state.isTest"
               :eventHandler="eventHandler"
+              :dictionary="dictionary"
               :on-change="onChange"
             ></o-form>
             <div style="padding: 10px"></div>
@@ -64,7 +65,7 @@
 <script lang="ts" setup name="CreateForm">
 import { OForm, utils, types } from "o-form";
 import { cloneDeep } from "lodash";
-
+import { dictionary } from "./config.ts";
 import { onMounted, reactive, computed, ref } from "vue";
 
 interface State {
@@ -80,7 +81,7 @@ interface State {
   dialog: any;
 }
 const root = new utils.Form();
-console.log('root', root)
+console.log("root", root);
 const formRef = ref<InstanceType<typeof OForm>>();
 const state: State = reactive({
   data: {},
@@ -118,6 +119,7 @@ function addItem() {
 }
 
 function refresh() {
+  console.log(root.form)
   state.data = cloneDeep(root.form.data);
   state.config = cloneDeep(root.form.config);
   state.isTest = root.isTest;
@@ -170,7 +172,7 @@ function printJson() {
   console.log(root.getFormConfig().json);
 }
 function init() {
-  state.typeOpts = root.types.map((item) => {
+  state.typeOpts = root.types.map((item:string) => {
     return {
       label: item,
       value: item,
