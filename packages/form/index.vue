@@ -9,7 +9,7 @@
         <el-row
           v-for="(block, blockIndex) of props.config"
           :key="blockIndex"
-          :gutter="block.gutter"
+          :gutter="block.gutter || 20"
         >
           <el-col :span="24">
             <div class="title-content">
