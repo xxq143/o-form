@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup name="Demo">
-import { OForm, utils, types } from "o-form";
+import { OForm, utils, types } from "pkg/index.ts";
 
 import { onMounted, reactive, ref } from "vue";
 

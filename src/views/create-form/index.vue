@@ -63,7 +63,7 @@
 </template>
 
 <script lang="ts" setup name="CreateForm">
-import { OForm, utils, types } from "o-form";
+import { OForm, utils, types } from "pkg/index.ts";
 import { cloneDeep } from "lodash";
 import { dictionary } from "./config.ts";
 import { onMounted, reactive, computed, ref } from "vue";
