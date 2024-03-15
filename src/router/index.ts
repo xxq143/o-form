@@ -35,7 +35,7 @@ Object.entries(modules).forEach(([_path, module]) => {
 
 const router: Router = createRouter({
     routes,
-    history: createWebHistory(),
+    history: createWebHistory('/o-form/'),
 });
 
 export default router;

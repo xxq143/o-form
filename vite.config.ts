@@ -12,6 +12,7 @@ export default defineConfig({
       "@": resolve(__dirname, "src"),
     },
   },
+  base: '/o-form/',
   build: {
     outDir: resolve(__dirname, 'out')
   }
