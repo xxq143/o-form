@@ -53,7 +53,7 @@ import en from "element-plus/dist/locale/en.mjs";
 import "element-plus/theme-chalk/dark/css-vars.css";
 import { useDark } from "@vueuse/core";
 import FormItem from "./components/form-item/index.vue";
-import utils from "pkg/utils/index";
+import utils from "./utils";
 import { cloneDeep } from "lodash";
 import type { FormInstance } from "element-plus";
 

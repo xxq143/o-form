@@ -12,7 +12,7 @@
 
 <script setup>
 import { computed, toRaw } from "vue";
-import utils from "pkg/utils";
+import utils from "pkg/form/utils";
 import { cloneDeep } from "lodash";
 const emits = defineEmits(["update:data"]);
 const props = defineProps({

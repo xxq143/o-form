@@ -37,7 +37,12 @@
         </el-col>
         <el-col :span="4">
           <el-button link @click="addItem">add</el-button>
-          <el-button link @click="removeItem(index)" :disabled="selfFormData.length === 1">remove</el-button>
+          <el-button
+            link
+            @click="removeItem(index)"
+            :disabled="selfFormData.length === 1"
+            >remove</el-button
+          >
         </el-col>
       </el-row>
     </el-form>
@@ -46,7 +51,7 @@
 
 <script setup lang="ts">
 import { ref, computed, toRaw, watch } from "vue";
-import utils from "pkg/utils";
+import utils from "pkg/form/utils";
 import { cloneDeep } from "lodash";
 import type { FormInstance } from "element-plus";
 
